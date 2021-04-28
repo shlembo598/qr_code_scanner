@@ -1,9 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:barcode_scan/barcode_scan.dart';
+import 'package:qr_code_scanner/pages/create_qr__page.dart';
 
 void main() => runApp(MaterialApp(
       theme: ThemeData.dark(),
+      routes: {
+        '/HomePage' :(context) => HomePage(),
+        '/CreateQRCode' :(context) => CreateQRPage(),
+      },
       home: HomePage(),
     ));
 
@@ -19,19 +23,23 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.teal[600],
-                    borderRadius: BorderRadius.all(Radius.circular(24)),
-                  ),
-                  width: 180,
-                  height: 170,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.qr_code, size: 100,),
-                      Text("Generate QR-Code", style: TextStyle(fontSize: 20),)
-                    ],
+                InkWell(
+                  borderRadius: BorderRadius.all(Radius.circular(24)),
+                  onTap:() {Navigator.pushNamed(context,'/CreateQRCode');},
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.teal[600],
+                      borderRadius: BorderRadius.all(Radius.circular(24)),
+                    ),
+                    width: 180,
+                    height: 170,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.qr_code, size: 100,),
+                        Text("Generate QR-Code", style: TextStyle(fontSize: 20),)
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: 10),

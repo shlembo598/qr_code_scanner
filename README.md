@@ -1,16 +1,6 @@
 # qr_code_scanner
 
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+QR-Code Scanner. Completed as a training task.
+![photo_2021-04-28_17-55-32](https://user-images.githubusercontent.com/62154729/116425655-1f88ba80-a84b-11eb-92b7-4ffff0470547.jpg)
+![photo_2021-04-28_17-55-35](https://user-images.githubusercontent.com/62154729/116425658-20215100-a84b-11eb-8302-10d406817749.jpg)
+![photo_2021-04-28_17-55-39](https://user-images.githubusercontent.com/62154729/116425662-20215100-a84b-11eb-8a29-e2173eb2ab7c.jpg)

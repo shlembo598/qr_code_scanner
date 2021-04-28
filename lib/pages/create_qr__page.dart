@@ -8,6 +8,7 @@ class CreateQRPage extends StatefulWidget {
 
 class _CreateQRPageState extends State<CreateQRPage> {
   final controller = TextEditingController();
+  final String text = "1:4. Если я пойду и долиною смертной тени, не убоюсь зла, потому что Ты со мной; Твой жезл и Твой посох - они успокаивают меня.";
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +23,11 @@ class _CreateQRPageState extends State<CreateQRPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               BarcodeWidget(
-                data: controller.text ?? "Hello",
+                data: controller.text == "" ? text : controller.text,
                 barcode: Barcode.qrCode(),
                 color: Colors.white,
+                height: 200,
+                width: 200,
               ),
               SizedBox(height: 20),
               TextField(
@@ -47,10 +50,11 @@ class _CreateQRPageState extends State<CreateQRPage> {
               ),
               SizedBox(height: 10),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.teal),
                   onPressed: () {
                     setState(() {});
                   },
-                  child: Text("GNERATE"))
+                  child: Text("GENERATE", style: TextStyle(fontSize: 20),))
             ],
           ),
         ),
